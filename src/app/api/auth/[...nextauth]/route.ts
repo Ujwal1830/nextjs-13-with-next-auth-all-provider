@@ -7,7 +7,7 @@ import connectToDB from "@/utils/db";
 import bcrypt from "bcrypt"
 import { sendEmail } from "@/utils/mailer";
 
-export const authOptions = {
+const authOptions = {
     providers: [
         CredentialsProvider({
             id: 'credentials',
