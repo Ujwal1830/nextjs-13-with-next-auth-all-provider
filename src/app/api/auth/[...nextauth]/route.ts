@@ -7,7 +7,9 @@ import connectToDB from "@/utils/db";
 import bcrypt from "bcrypt"
 import { sendEmail } from "@/utils/mailer";
 
-const authOptions = {
+// const authOptions =
+
+const handler = NextAuth( {
     providers: [
         CredentialsProvider({
             id: 'credentials',
@@ -71,9 +73,7 @@ const authOptions = {
             return true
         },
     }
-}
+});
 
-const handler = NextAuth(authOptions);
-
-export {handler as GET, handler as POST } 
+export { handler as GET, handler as POST }
 
